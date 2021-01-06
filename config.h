@@ -45,9 +45,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "[M]",      monocle },    /* first entry is default */
+	//{ "[]=",      tile },    /* first entry is default */
+	//{ "><>",      NULL },    /* no layout function means floating behavior */
 };
 
 /* key definitions */
@@ -62,42 +62,101 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-//static const char *filemanager[] = { "
-//launches htop
-static const char *monitor[] = { "/usr/bin/htop", NULL };
-static const char *vim[] = { "/usr/bin/vim", NULL };
-static const char *firefoxcmd[] = { "firefox", NULL };
-//sets st as the default terminal
-static const char *termcmd[]  = { "st", NULL };
-//volume controls
+// volume controls
 static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
+static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+
+// set st as the default terminal
+static const char *termcmd[]  = { "st", NULL };
+
+// terminal commands
+static const char *shutdown[] = { "st", "-e", "systemctl", "poweroff",  NULL };
+static const char *reboot[] = { "st", "-e", "systemctl", "reboot",  NULL };
+static const char *ranger[] = { "st", "-e", "ranger", NULL };
+static const char *htop[] = { "st", "-e", "htop", NULL };
+static const char *vim[] = { "st", "-e", "vim", NULL };
+static const char *irssi[] = { "st", "-e", "irssi", NULL };
+static const char *record[] = { "record", NULL };
+static const char *vpn[] = { "vpn", NULL };
+static const char *mykeys[] = { "keys", NULL };
+static const char *download[] = { "download", NULL };
+static const char *torrent[] = { "tor", NULL };
+static const char *mypointer[] = { "pointer", NULL };
+static const char *photos[] = { "sxiv", "-ftqrb", "$PATHPictures", NULL };
+
+// firefox command
+static const char *firefox[] = { "firefox", NULL };
+
+// websites
+static const char *google[] = { "firefox", "https://www.google.com/", NULL };
+static const char *facebook[] = { "firefox", "https://www.facebook.com/", NULL };
+static const char *messenger[] = { "firefox", "https://www.messenger.com/", NULL };
+static const char *youtube[] = { "firefox", "https://www.youtube.com/", NULL };
+static const char *instagram[] = { "firefox", "https://www.instagram.com/", NULL };
+static const char *gmail[] = { "firefox", "https://mail.google.com/", NULL };
+static const char *ouedkniss[] = { "firefox", "https://www.ouedkniss.com/", NULL };
+static const char *GPhotos[] = { "firefox", "https://photos.google.com/", NULL };
+static const char *eccp[] = { "firefox", "https://eccp.poste.dz/", NULL };
+static const char *univ[] = { "firefox", "https://fs.univ-boumerdes.dz/", NULL };
+static const char *translate[] = { "firefox", "https://translate.google.com/", NULL };
+static const char *magnetDL[] = { "firefox", "https://www.magnetdl.com/", NULL };
+static const char *contacts[] = { "firefox", "https://contacts.google.com/", NULL };
+static const char *github[] = { "firefox", "https://www.github.com/nemo256/", NULL };
 
 #include "shiftview.c"
 static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+  /* system commands */
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = shutdown } },
+	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = reboot } },
+  /* terminal commands */
 	{ MODKEY,	                      XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,	                      XK_h,      spawn,          {.v = monitor } },
-	{ MODKEY,	                      XK_b,      spawn,          {.v = firefoxcmd } },
-	{ MODKEY,	                      XK_v,      spawn,          {.v = vim } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = ranger } },
+	{ MODKEY,                       XK_h,      spawn,          {.v = htop } },
+	{ MODKEY,                       XK_v,      spawn,          {.v = vim } },
+	{ MODKEY,                       XK_i,      spawn,          {.v = irssi } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = record } },
+	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = vpn } },
+	{ MODKEY,                       XK_k,      spawn,          {.v = mykeys } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = download } },
+	//{ MODKEY,                       XK_t,      spawn,          {.v = torrent } },
+	{ MODKEY,                       XK_apostrophe,      spawn,          {.v = mypointer } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
+  /* website commands */
+	{ MODKEY,	                      XK_b,      spawn,          {.v = firefox } },
+	{ MODKEY,	                      XK_g,      spawn,          {.v = google } },
+	{ MODKEY|ShiftMask,	            XK_f,      spawn,          {.v = facebook } },
+	{ MODKEY|ShiftMask,	            XK_m,      spawn,          {.v = messenger } },
+	{ MODKEY|ShiftMask,	            XK_y,      spawn,          {.v = youtube } },
+	{ MODKEY|ShiftMask,	            XK_i,      spawn,          {.v = instagram } },
+	{ MODKEY|ShiftMask,	            XK_g,      spawn,          {.v = gmail } },
+	{ MODKEY|ShiftMask,	            XK_o,      spawn,          {.v = ouedkniss } },
+	{ MODKEY|ShiftMask,	            XK_p,      spawn,          {.v = GPhotos } },
+	{ MODKEY|ShiftMask,	            XK_e,      spawn,          {.v = eccp } },
+	{ MODKEY|ShiftMask,	            XK_u,      spawn,          {.v = univ } },
+	{ MODKEY|ShiftMask,	            XK_t,      spawn,          {.v = translate } },
+	{ MODKEY|ShiftMask,	            XK_d,      spawn,          {.v = magnetDL } },
+	{ MODKEY|ShiftMask,	            XK_c,      spawn,          {.v = contacts } },
+	//{ MODKEY|ShiftMask,	            XK_g,      spawn,          {.v = github } },
+
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	//{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	//{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+	//{ MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
+	//{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_z,	     zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_Tab,	   zoom,           {0} },
+	{ MODKEY,                       XK_z,      view,           {0} },
 	{ MODKEY,	                      XK_q,      killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
+	//{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
+	//{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
+	//{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,             XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
