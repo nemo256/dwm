@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 5;        /* border pixel size of windows */
 static const unsigned int gappx     = 5;        /* gaps size between windows */
