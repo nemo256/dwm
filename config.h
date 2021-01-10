@@ -37,7 +37,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       0 << 0,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       0,	    0,           -1 },
 };
 
 /* layout(s) */
@@ -65,6 +65,10 @@ static const Layout layouts[] = {
 
 /* commands */
 // volume controls
+static const char *upbrightness[] = { "brightnessctl", "s", "10%+", NULL };
+static const char *downbrightness[] = { "brightnessctl", "s", "10%-", NULL };
+static const char *upkbbacklight[] = { "/home/nemo/bin/kbbacklight", "UP", NULL };
+static const char *downkbbacklight[] = { "/home/nemo/bin/kbbacklight", "DOWN", NULL };
 static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
@@ -113,6 +117,13 @@ static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
   /* system commands */
+	{ 0,             	XF86XK_MonBrightnessUp,       spawn,          {.v = upbrightness } },
+	{ 0,             	XF86XK_MonBrightnessDown,     spawn,          {.v = downbrightness } },
+	{ 0,             	XF86XK_KbdBrightnessUp,       spawn,          {.v = upkbbacklight } },
+	{ 0,             	XF86XK_KbdBrightnessDown,     spawn,          {.v = downkbbacklight } },
+	{ 0,             	XF86XK_AudioRaiseVolume,      spawn,          {.v = upvol } },
+	{ 0,             	XF86XK_AudioLowerVolume,      spawn,          {.v = downvol } },
+	{ 0,             	XF86XK_AudioMute,      spawn,          {.v = mutevol } },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = shutdown } },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = reboot } },
   /* terminal commands */
@@ -170,9 +181,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-  	{ MODKEY,                       XK_F8,     spawn,          {.v = upvol   } },
-  	{ MODKEY,                       XK_F7,     spawn,          {.v = downvol } },
-  	{ MODKEY,                       XK_F5,     spawn,          {.v = mutevol } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
