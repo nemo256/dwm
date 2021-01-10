@@ -37,7 +37,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       0 << 0,       0,           -1 },
 };
 
 /* layout(s) */
@@ -116,7 +116,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = shutdown } },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = reboot } },
   /* terminal commands */
-	{ MODKEY,	                      XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = ranger } },
 	{ MODKEY,                       XK_h,      spawn,          {.v = htop } },
@@ -130,21 +130,21 @@ static Key keys[] = {
 	{ MODKEY,                       XK_apostrophe,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
   /* website commands */
-	{ MODKEY,	                      XK_b,      spawn,          {.v = firefox } },
-	{ MODKEY,	                      XK_g,      spawn,          {.v = google } },
-	{ MODKEY|ShiftMask,	            XK_f,      spawn,          {.v = facebook } },
-	{ MODKEY|ShiftMask,	            XK_m,      spawn,          {.v = messenger } },
-	{ MODKEY|ShiftMask,	            XK_y,      spawn,          {.v = youtube } },
-	{ MODKEY|ShiftMask,	            XK_i,      spawn,          {.v = instagram } },
-	{ MODKEY|ShiftMask,	            XK_g,      spawn,          {.v = gmail } },
-	{ MODKEY|ShiftMask,	            XK_o,      spawn,          {.v = ouedkniss } },
-	{ MODKEY|ShiftMask,	            XK_p,      spawn,          {.v = GPhotos } },
-	{ MODKEY|ShiftMask,	            XK_e,      spawn,          {.v = eccp } },
-	{ MODKEY|ShiftMask,	            XK_u,      spawn,          {.v = univ } },
-	{ MODKEY|ShiftMask,	            XK_t,      spawn,          {.v = translate } },
-	{ MODKEY|ShiftMask,	            XK_d,      spawn,          {.v = magnetDL } },
-	{ MODKEY|ShiftMask,	            XK_c,      spawn,          {.v = contacts } },
-	//{ MODKEY|ShiftMask,	            XK_g,      spawn,          {.v = github } },
+	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
+	{ MODKEY,	                XK_g,      spawn,          {.v = google } },
+	{ MODKEY|ShiftMask,	        XK_f,      spawn,          {.v = facebook } },
+	{ MODKEY|ShiftMask,	        XK_m,      spawn,          {.v = messenger } },
+	{ MODKEY|ShiftMask,	        XK_y,      spawn,          {.v = youtube } },
+	{ MODKEY|ShiftMask,	        XK_i,      spawn,          {.v = instagram } },
+	{ MODKEY|ShiftMask,	        XK_g,      spawn,          {.v = gmail } },
+	{ MODKEY|ShiftMask,	        XK_o,      spawn,          {.v = ouedkniss } },
+	{ MODKEY|ShiftMask,	        XK_p,      spawn,          {.v = GPhotos } },
+	{ MODKEY|ShiftMask,	        XK_e,      spawn,          {.v = eccp } },
+	{ MODKEY|ShiftMask,	        XK_u,      spawn,          {.v = univ } },
+	{ MODKEY|ShiftMask,	        XK_t,      spawn,          {.v = translate } },
+	{ MODKEY|ShiftMask,	        XK_d,      spawn,          {.v = magnetDL } },
+	{ MODKEY|ShiftMask,	        XK_c,      spawn,          {.v = contacts } },
+	//{ MODKEY|ShiftMask,	          XK_g,      spawn,          {.v = github } },
 
 	{ MODKEY,                       XK_t,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -170,9 +170,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-  { MODKEY,                       XK_F8,     spawn,          {.v = upvol   } },
-  { MODKEY,                       XK_F7,     spawn,          {.v = downvol } },
-  { MODKEY,                       XK_F5,     spawn,          {.v = mutevol } },
+  	{ MODKEY,                       XK_F8,     spawn,          {.v = upvol   } },
+  	{ MODKEY,                       XK_F7,     spawn,          {.v = downvol } },
+  	{ MODKEY,                       XK_F5,     spawn,          {.v = mutevol } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
