@@ -85,13 +85,13 @@ static const char *ranger[] = { "st", "-e", "ranger", NULL };
 static const char *htop[] = { "st", "-e", "htop", NULL };
 static const char *vim[] = { "st", "-e", "vim", NULL };
 static const char *irssi[] = { "st", "-e", "irssi", NULL };
-static const char *record[] = { "record", NULL };
-static const char *vpn[] = { "vpn", NULL };
-static const char *mykeys[] = { "keys", NULL };
-static const char *download[] = { "download", NULL };
-static const char *torrent[] = { "tor", NULL };
-static const char *mypointer[] = { "pointer", NULL };
-static const char *photos[] = { "sxiv", "-ftqrb", "$PATHPictures", NULL };
+static const char *record[] = { "/home/nemo/bin/record", NULL };
+static const char *vpn[] = { "/home/nemo/bin/vpn", NULL };
+static const char *mykeys[] = { "/home/nemo/bin/keys", NULL };
+static const char *download[] = { "/home/nemo/bin/download", NULL };
+static const char *torrent[] = { "/home/nemo/bin/tor", NULL };
+static const char *mypointer[] = { "/home/nemo/bin/pointer", NULL };
+static const char *photos[] = { "sxiv", "-ftqrb", "/home/nemo/Pictures", NULL };
 
 // firefox command
 static const char *firefox[] = { "firefox", NULL };
@@ -136,9 +136,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          {.v = record } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = vpn } },
 	{ MODKEY,                       XK_k,      spawn,          {.v = mykeys } },
-	{ MODKEY,                       XK_d,      spawn,          {.v = download } },
-	//{ MODKEY,                       XK_t,      spawn,          {.v = torrent } },
-	{ MODKEY,                       XK_apostrophe,      spawn,          {.v = mypointer } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = download } },
+	{ MODKEY,                       XK_t,      spawn,          {.v = torrent } },
+	{ MODKEY,                       XK_agrave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
@@ -157,7 +157,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	        XK_c,      spawn,          {.v = contacts } },
 	//{ MODKEY|ShiftMask,	          XK_g,      spawn,          {.v = github } },
 
-	{ MODKEY,                       XK_t,      togglebar,      {0} },
+	{ MODKEY,                       XK_f,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	//{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	//{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
