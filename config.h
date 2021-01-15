@@ -18,7 +18,7 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 //current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
-//Top bar second color (blue) and active window border color
+//Top bar second color (orange) and active window border color
 static const char col_cyan[]        = "#f59542";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -28,7 +28,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "", "", "{}", "", "" };
+static const char *tags[] = { "", "", "{}", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -36,8 +36,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       0,	    0,           -1 },
+	{ "Gimp",     NULL,       NULL,       0,            0,           -1 },
+	{ "Firefox-esr",  NULL,       NULL,       1 >> 3,	    0,           -1 },
 };
 
 /* layout(s) */
@@ -85,12 +85,13 @@ static const char *ranger[] = { "st", "-e", "ranger", NULL };
 static const char *htop[] = { "st", "-e", "htop", NULL };
 static const char *vim[] = { "st", "-e", "vim", NULL };
 static const char *irssi[] = { "st", "-e", "irssi", NULL };
+static const char *torrent[] = { "st", "-e", "transmission-remote-cli", NULL };
 static const char *record[] = { "/home/nemo/bin/record", NULL };
 static const char *vpn[] = { "/home/nemo/bin/vpn", NULL };
 static const char *mykeys[] = { "/home/nemo/bin/keys", NULL };
 static const char *download[] = { "/home/nemo/bin/download", NULL };
-static const char *torrent[] = { "/home/nemo/bin/tor", NULL };
 static const char *mypointer[] = { "/home/nemo/bin/pointer", NULL };
+static const char *screenshot[] = { "/home/nemo/bin/screenshot", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/home/nemo/Pictures", NULL };
 
 // firefox command
@@ -138,7 +139,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,      spawn,          {.v = mykeys } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = download } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = torrent } },
-	{ MODKEY,                       XK_agrave,      spawn,          {.v = mypointer } },
+	{ MODKEY,                       XK_grave,      spawn,          {.v = screenshot } },
+	{ ControlMask,                  XK_grave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
@@ -166,7 +168,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Tab,	   zoom,           {0} },
 	{ MODKEY,                       XK_z,      view,           {0} },
-	{ MODKEY,	                      XK_q,      killclient,     {0} },
+	{ MODKEY,	                XK_q,      killclient,     {0} },
 	//{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
 	//{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[1]} },
 	//{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -186,10 +188,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
+	//TAGKEYS(                        XK_6,                      5)
+	//TAGKEYS(                        XK_7,                      6)
+	//TAGKEYS(                        XK_8,                      7)
+	//TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
