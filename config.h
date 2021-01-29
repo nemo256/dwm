@@ -97,6 +97,7 @@ static const char *mykeys[] = { "/home/nemo/bin/keys", NULL };
 static const char *download[] = { "/home/nemo/bin/download", NULL };
 static const char *mypointer[] = { "/home/nemo/bin/pointer", NULL };
 static const char *screenshot[] = { "/home/nemo/bin/screenshot", NULL };
+static const char *screenshotSelect[] = { "/home/nemo/bin/screenshotSelect", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/home/nemo/Pictures", NULL };
 
 // firefox command
@@ -149,6 +150,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      spawn,          {.v = torrent } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = music } },
 	{ MODKEY,                       XK_grave,      spawn,          {.v = screenshot } },
+	{ MODKEY|ShiftMask,             XK_grave,      spawn,          {.v = screenshotSelect } },
 	{ ControlMask,                  XK_grave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
   /* website commands */
