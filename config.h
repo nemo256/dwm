@@ -150,7 +150,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      spawn,          {.v = torrent } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = music } },
 	{ MODKEY,                       XK_grave,      spawn,          {.v = screenshot } },
-	{ MODKEY|ShiftMask,             XK_grave,      spawn,          {.v = screenshotSelect } },
+	{ MODKEY|ShiftMask,             XK_grave,      spawn,          {.v = screenshotSelect} },
 	{ ControlMask,                  XK_grave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
   /* website commands */
