@@ -94,6 +94,7 @@ static const char *abook[] = { "st", "-e", "abook", NULL };
 static const char *pipeviewer[] = { "st", "-e", "pipe-viewer", NULL };
 static const char *torrent[] = { "st", "-e", "transmission-remote-cli", NULL };
 static const char *music[] = { "st", "-e", "ncmpcpp", NULL };
+static const char *lynx[] = { "st", "-e", "lynx", NULL };
 static const char *record[] = { "/home/nemo/bin/record", NULL };
 static const char *vpn[] = { "/home/nemo/bin/vpn", NULL };
 static const char *mykeys[] = { "/home/nemo/bin/keys", NULL };
@@ -155,6 +156,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      spawn,          {.v = download } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = torrent } },
 	{ MODKEY,                       XK_m,      spawn,          {.v = music } },
+	{ MODKEY,                       XK_l,      spawn,          {.v = lynx } },
 	{ MODKEY,                       XK_grave,      spawn,          {.v = screenshot } },
 	{ MODKEY|ShiftMask,             XK_grave,      spawn,          {.v = screenshotSelect} },
 	{ ControlMask,                  XK_grave,      spawn,          {.v = mypointer } },
@@ -182,7 +184,7 @@ static Key keys[] = {
 	//{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	//{ MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
 	//{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	//{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	//{ MODKEY,                       XK_Tab,	   zoom,           {0} },
 	{ MODKEY,                       XK_z,      view,           {0} },
 	{ MODKEY,	                XK_q,      killclient,     {0} },
