@@ -11,7 +11,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=20:style=bold", "fontawesome:size=20:style=bold" };
 static const char dmenufont[]       = "monospace:size=20:style=bold";
 //background color
-static const char col_gray1[]       = "#222222";
+static const char col_black[]       = "#000000";
 //inactive window border color
 static const char col_gray2[]       = "#444444";
 //font color
@@ -20,11 +20,11 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 //Top bar second color (orange) and active window border color
 //#f59542
-static const char col_cyan[]        = "#993399";
+static const char col_magenta[]        = "#993399";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_magenta,  col_magenta  },
 };
 
 /* tagging */
@@ -77,7 +77,7 @@ static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_gray3, "-sb", col_magenta, "-sf", col_gray4, NULL };
 
 // set st as the default terminal
 static const char *termcmd[]  = { "st", NULL };
