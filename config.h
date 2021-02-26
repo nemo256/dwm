@@ -103,6 +103,7 @@ static const char *mypointer[] = { "/home/nemo/bin/pointer", NULL };
 static const char *screenshot[] = { "/home/nemo/bin/screenshot", NULL };
 static const char *screenshotSelect[] = { "/home/nemo/bin/screenshotSelect", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/home/nemo/Pictures", NULL };
+static const char *tuir[] = { "st", "-e", "tuir", NULL };
 
 // firefox command
 static const char *firefox[] = { "firefox", NULL };
@@ -143,7 +144,7 @@ static Key keys[] = {
   /* terminal commands */
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_r,      spawn,          {.v = ranger } },
+	{ MODKEY,                       XK_f,      spawn,          {.v = ranger } },
 	{ MODKEY,                       XK_h,      spawn,          {.v = htop } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = vim } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = email } },
@@ -161,10 +162,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_grave,      spawn,          {.v = screenshotSelect} },
 	{ ControlMask,                  XK_grave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
+	{ MODKEY,             					XK_r,      spawn,          {.v = tuir } },
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
 	{ MODKEY,	                XK_g,      spawn,          {.v = google } },
-	{ MODKEY|ShiftMask,	        XK_f,      spawn,          {.v = facebook } },
+	//{ MODKEY|ShiftMask,	        XK_f,      spawn,          {.v = facebook } },
 	{ MODKEY|ShiftMask,	        XK_m,      spawn,          {.v = messenger } },
 	{ MODKEY|ShiftMask,	        XK_y,      spawn,          {.v = youtube } },
 	{ MODKEY|ShiftMask,	        XK_i,      spawn,          {.v = instagram } },
