@@ -180,7 +180,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	        XK_c,      spawn,          {.v = contacts } },
 	//{ MODKEY|ShiftMask,	          XK_g,      spawn,          {.v = github } },
 
-	{ MODKEY,                       XK_f,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,         XK_f,      togglebar,      {0} },
 	{ MODKEY,                       XK_Tab,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,      focusstack,     {.i = -1 } },
 	//{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
