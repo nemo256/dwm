@@ -17,7 +17,7 @@ static const char col_gray2[]       = "#444444";
 //font color
 static const char col_gray3[]       = "#bbbbbb";
 //current tag and current window font color
-static const char col_gray4[]       = "#eeeeee";
+static const char col_gray4[]       = "#000000";
 //Top bar second color (orange) and active window border color
 //#f59542
 static const char col_magenta[]        = "#993399";
