@@ -145,7 +145,7 @@ static Key keys[] = {
   /* terminal commands */
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_f,      spawn,          {.v = ranger } },
+	/* { MODKEY,                       XK_f,      spawn,          {.v = ranger } }, */
 	{ MODKEY,                       XK_h,      spawn,          {.v = htop } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = vim } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = email } },
@@ -167,7 +167,7 @@ static Key keys[] = {
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
 	{ MODKEY,	                XK_g,      spawn,          {.v = google } },
-	//{ MODKEY|ShiftMask,	        XK_f,      spawn,          {.v = facebook } },
+	{ MODKEY|ShiftMask,	        XK_f,      spawn,          {.v = facebook } },
 	{ MODKEY|ShiftMask,	        XK_m,      spawn,          {.v = messenger } },
 	{ MODKEY|ShiftMask,	        XK_n,      spawn,          {.v = netflix } },
 	{ MODKEY|ShiftMask,	        XK_y,      spawn,          {.v = youtube } },
@@ -182,7 +182,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	        XK_c,      spawn,          {.v = contacts } },
 	//{ MODKEY|ShiftMask,	          XK_g,      spawn,          {.v = github } },
 
-	{ MODKEY|ShiftMask,         XK_f,      togglebar,      {0} },
+	{ MODKEY,         							XK_f,      	 togglebar,      {0} },
 	{ MODKEY,                       XK_Tab,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,      focusstack,     {.i = -1 } },
 	//{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
