@@ -95,6 +95,7 @@ static const char *pipeviewer[] = { "st", "-e", "pipe-viewer", NULL };
 static const char *torrent[] = { "st", "-e", "tremc", NULL };
 static const char *music[] = { "st", "-e", "ncmpcpp", NULL };
 static const char *lynx[] = { "st", "-e", "lynx", NULL };
+static const char *watch[] = { "/home/nemo/bin/watch", NULL };
 static const char *record[] = { "/home/nemo/bin/record", NULL };
 static const char *vpn[] = { "/home/nemo/bin/vpn", NULL };
 static const char *mykeys[] = { "/home/nemo/bin/keys", NULL };
@@ -103,7 +104,6 @@ static const char *mypointer[] = { "/home/nemo/bin/pointer", NULL };
 static const char *screenshot[] = { "/home/nemo/bin/screenshot", NULL };
 static const char *screenshotSelect[] = { "/home/nemo/bin/screenshotSelect", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/home/nemo/Pictures", NULL };
-static const char *watch[] = { "st", "-e", "mpv", "/home/nemo/Downloads/*.mkv", "/home/nemo/Downloads/*/*.mkv", NULL };
 /* static const char *tuir[] = { "st", "-e", "tuir", NULL }; */
 
 // firefox command
