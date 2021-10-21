@@ -103,7 +103,7 @@ static const char *mypointer[] = { "/home/nemo/bin/pointer", NULL };
 static const char *screenshot[] = { "/home/nemo/bin/screenshot", NULL };
 static const char *screenshotSelect[] = { "/home/nemo/bin/screenshotSelect", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/home/nemo/Pictures", NULL };
-static const char *watch[] = { "st", "-e", "mpv", "*.mkv", "*/*.mkv", NULL };
+static const char *watch[] = { "st", "-e", "mpv", "/home/nemo/Downloads/*.mkv", "/home/nemo/Downloads/*/*.mkv", NULL };
 /* static const char *tuir[] = { "st", "-e", "tuir", NULL }; */
 
 // firefox command
