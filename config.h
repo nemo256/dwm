@@ -103,7 +103,8 @@ static const char *mypointer[] = { "/home/nemo/bin/pointer", NULL };
 static const char *screenshot[] = { "/home/nemo/bin/screenshot", NULL };
 static const char *screenshotSelect[] = { "/home/nemo/bin/screenshotSelect", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/home/nemo/Pictures", NULL };
-static const char *tuir[] = { "st", "-e", "tuir", NULL };
+static const char *watch[] = { "st", "-e", "mpv", "*.mkv", "*/*.mkv", NULL };
+/* static const char *tuir[] = { "st", "-e", "tuir", NULL }; */
 
 // firefox command
 static const char *firefox[] = { "firefox", NULL };
@@ -153,7 +154,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_c,      spawn,          {.v = abook } },
 	{ MODKEY,                       XK_y,      spawn,          {.v = pipeviewer } },
 	{ MODKEY,                       XK_i,      spawn,          {.v = irssi } },
-	{ MODKEY,                       XK_w,      spawn,          {.v = record } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = record } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = vpn } },
 	{ MODKEY,                       XK_k,      spawn,          {.v = mykeys } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = download } },
@@ -164,7 +165,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_grave,      spawn,          {.v = screenshotSelect} },
 	{ ControlMask,                  XK_grave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
-	{ MODKEY,             					XK_r,      spawn,          {.v = tuir } },
+	{ MODKEY,             					XK_w,      spawn,          {.v = watch } },
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
 	{ MODKEY,	                XK_g,      spawn,          {.v = google } },
