@@ -8,8 +8,8 @@ static const unsigned int gappx     = 5;        /* gaps size between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=20:style=bold", "fontawesome:size=20:style=bold" };
-static const char dmenufont[]       = "monospace:size=20:style=bold";
+static const char *fonts[]          = { "Bitstream Vera Sans Mono:size=20:style=bold", "fontawesome:size=20:style=bold" };
+static const char dmenufont[]       = "Bitstream Vera Sans Mono:size=20:style=bold";
 //background color
 static const char col_black[]       = "#000000";
 //inactive window border color
@@ -147,7 +147,7 @@ static Key keys[] = {
   /* terminal commands */
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	/* { MODKEY,                       XK_f,      spawn,          {.v = ranger } }, */
+	{ MODKEY,                       XK_f,      spawn,          {.v = ranger } },
 	{ MODKEY,                       XK_h,      spawn,          {.v = htop } },
 	{ MODKEY,                       XK_v,      spawn,          {.v = vim } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = email } },
@@ -165,7 +165,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_grave,      spawn,          {.v = screenshotSelect} },
 	{ ControlMask,                  XK_grave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = photos } },
-	{ MODKEY,             					XK_w,      spawn,          {.v = watch } },
+	{ MODKEY,             		XK_w,      spawn,          {.v = watch } },
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
 	{ MODKEY,	                XK_g,      spawn,          {.v = google } },
@@ -185,7 +185,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	        XK_c,      spawn,          {.v = contacts } },
 	//{ MODKEY|ShiftMask,	          XK_g,      spawn,          {.v = github } },
 
-	{ MODKEY,         							XK_f,      	 togglebar,      {0} },
+	/* { MODKEY,         		XK_f,        togglebar,      {0} }, */
 	{ MODKEY,                       XK_Tab,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,      focusstack,     {.i = -1 } },
 	//{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
