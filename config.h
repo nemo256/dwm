@@ -20,7 +20,7 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#000000";
 //Top bar second color (orange) and active window border color
 //#f59542
-static const char col_magenta[]        = "#993399";
+static const char col_magenta[]        = "#4b0088";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
@@ -95,7 +95,7 @@ static const char *irssi[] = { "st", "-e", "irssi", NULL };
 static const char *newsboat[] = { "st", "-e", "newsboat", NULL };
 static const char *email[] = { "st", "-e", "neomutt", NULL };
 static const char *abook[] = { "st", "-e", "abook", NULL };
-static const char *pipeviewer[] = { "st", "-e", "pipe-viewer", NULL };
+static const char *pipeviewer[] = { "st", "-f", "'Fira Code:size=16:style=bold:antialias=true:autohint=true'", "-e", "pipe-viewer", NULL };
 static const char *torrent[] = { "st", "-e", "tremc", NULL };
 static const char *music[] = { "st", "-e", "ncmpcpp", NULL };
 static const char *lynx[] = { "st", "-e", "lynx", NULL };
