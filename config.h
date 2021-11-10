@@ -20,11 +20,11 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#000000";
 //Top bar second color (orange) and active window border color
 //#f59542
-static const char col_magenta[]        = "#4b0088";
+static const char col_indigo[]        = "#4b0088";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_magenta,  col_magenta  },
+	[SchemeSel]  = { col_gray4, col_indigo,  col_indigo  },
 };
 
 /* tagging */
@@ -80,7 +80,7 @@ static const char *upvol[]   = { "amixer", "-q", "set", "Master", "5%+", "unmute
 static const char *downvol[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 static const char *mutevol[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_gray3, "-sb", col_magenta, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_gray3, "-sb", col_indigo, "-sf", col_gray4, NULL };
 
 // set st as the default terminal
 static const char *termcmd[]  = { "st", NULL };
