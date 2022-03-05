@@ -68,8 +68,8 @@ static const Layout layouts[] = {
 // volume controls
 static const char *upbrightness[] = { "brightnessctl", "s", "10%+", NULL };
 static const char *downbrightness[] = { "brightnessctl", "s", "10%-", NULL };
-static const char *upkbbacklight[] = { "/home/nemo/bin/kbbacklight", "UP", NULL };
-static const char *downkbbacklight[] = { "/home/nemo/bin/kbbacklight", "DOWN", NULL };
+static const char *upkbbacklight[] = { "/root/bin/kbbacklight", "UP", NULL };
+static const char *downkbbacklight[] = { "/root/bin/kbbacklight", "DOWN", NULL };
 static const char *dunstclose[]   = { "dunstctl", "close", NULL };
 static const char *dunstcloseall[]   = { "dunstctl", "close-all", NULL };
 static const char *dunsthistory[]   = { "dunstctl", "history-pop", NULL };
