@@ -117,7 +117,7 @@ static const char *firefox[] = { "firefox", NULL };
 // websites
 static const char *google[] = { "firefox", "https://www.google.com/", NULL };
 static const char *facebook[] = { "firefox", "https://www.facebook.com/", NULL };
-static const char *messenger[] = { "firefox", "https://www.messenger.com/", NULL };
+static const char *messenger[] = { "firefox", "https://www.facebook.com/messages/", NULL };
 static const char *netflix[] = { "firefox", "https://www.netflix.com/", NULL };
 static const char *youtube[] = { "firefox", "https://www.youtube.com/", NULL };
 static const char *instagram[] = { "firefox", "https://www.instagram.com/", NULL };
