@@ -3,28 +3,36 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel size of windows */
-static const unsigned int gappx     = 5;        /* gaps size between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Code:size=20:style=Bold",  "SymbolsNerdFont:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
-static const char dmenufont[]       = "Fira Code:size=20:style=Bold";
+static const unsigned int borderpx  	= 5;        /* border pixel size of windows */
+static const unsigned int gappx     	= 5;        /* gaps size between windows */
+static const unsigned int snap      	= 32;       /* snap pixel */
+static const int showbar            	= 1;        /* 0 means no bar */
+static const int topbar             	= 1;        /* 0 means bottom bar */
+static const char *fonts[]          	= { "Fira Code:size=20:style=Bold",  "SymbolsNerdFont:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
+static const char dmenufont[]       	= "Fira Code:size=20:style=Bold";
 //background color
-static const char col_black[]       = "#000000";
+static const char col_black[]       	= "#000000";
 //inactive window border color
-static const char col_gray2[]       = "#444444";
+static const char col_gray2[]       	= "#444444";
 //font color
-static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray3[]       	= "#bbbbbb";
 //current tag and current window font color
-static const char col_gray4[]       = "#000000";
+static const char col_gray4[]       	= "#000000";
 //Top bar second color (orange) and active window border color
 //#f59542
-static const char col_indigo[]        = "#4b0088";
-static const char *colors[][3]      = {
+static const char col_indigo[]      	= "#4b0088";
+static const unsigned int baralpha  	= 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+static const char *colors[][3]      	= {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_indigo,  col_indigo  },
+};
+
+static const unsigned int alphas[][3] = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
