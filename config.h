@@ -21,7 +21,7 @@ static const char col_gray4[]       	= "#000000";
 //Top bar second color (orange) and active window border color
 //#f59542
 static const char col_indigo[]      	= "#4b0088";
-static const unsigned int baralpha  	= 0xe6;
+static const unsigned int baralpha  	= 0xcc;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      	= {
 	/*               fg         bg         border   */
