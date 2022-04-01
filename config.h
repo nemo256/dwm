@@ -103,7 +103,7 @@ static const char *vim[] = { "st", "-e", "nvim", NULL };
 static const char *irssi[] = { "st", "-e", "irssi", NULL };
 static const char *newsboat[] = { "st", "-e", "newsboat", NULL };
 static const char *email[] = { "st", "-e", "neomutt", NULL };
-static const char *abook[] = { "st", "-e", "abook", NULL };
+static const char *clock[] = { "st", "-e", "tty-clock", "-scbC", "4", NULL };
 static const char *pipeviewer[] = { "st", "-f", "'Fira Code:size=16:style=bold:antialias=true:autohint=true'", "-e", "pipe-viewer", NULL };
 static const char *torrent[] = { "st", "-e", "tremc", NULL };
 static const char *music[] = { "st", "-e", "ncmpcpp", NULL };
@@ -167,7 +167,7 @@ static Key keys[] = {
 	{ MODKEY,                 XK_h,      spawn,          {.v = htop } },
 	{ MODKEY,                 XK_v,      spawn,          {.v = vim } },
 	{ MODKEY,                 XK_e,      spawn,          {.v = email } },
-	{ MODKEY,                 XK_c,      spawn,          {.v = abook } },
+	{ MODKEY,                 XK_c,      spawn,          {.v = clock } },
 	{ MODKEY,                 XK_y,      spawn,          {.v = pipeviewer } },
 	{ MODKEY,                 XK_i,      spawn,          {.v = irssi } },
 	{ MODKEY,                 XK_n,      spawn,          {.v = newsboat } },
