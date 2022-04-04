@@ -37,15 +37,23 @@ static const unsigned int alphas[][3] = {
 
 /* tagging */
 //tag names (upper left)
-static const char *tags[] = { "", "", "{}", "" };//, "" };
+static const char *tags[] = { "", "", "{}", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "firefox",  NULL,       NULL,       1,	    			0,           -1 },
+	/* class      instance      title    		    tags mask  switchtotag  isfloating  monitor */
+	{ "firefox",  "Navigator",  NULL,  	 	      1,	    	 1, 				  0,   			  -1 },
+	{ "St",  			"st",       	"nvim",   	    1 << 2,	   1, 				  0,   			  -1 },
+	{ "St",  			"st",       	"newsboat",     1 << 3,	   1, 				  0,   		 	  -1 },
+	{ "St",  			"st",       	"irssi",  	    1 << 3,	   1, 				  0,   			  -1 },
+	{ "St",  			"st",       	"ani-cli",      1 << 3,	   1, 				  0,   			  -1 },
+	{ "St",  			"st",       	"pipe-viewer",  1 << 3,	   1, 				  0,   			  -1 },
+	{ "St",  			"st",       	"tremc",  			1 << 3,	   1, 				  0,   			  -1 },
+	{ "Zathura",  NULL,       	NULL,  					1 << 3,	   1, 				  0,   			  -1 },
+	{ "mpv",  		"gl",       	NULL,  			    1 << 3,	   1, 				  0,   			  -1 },
 };
 
 /* layout(s) */
