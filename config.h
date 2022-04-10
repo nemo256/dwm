@@ -46,6 +46,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance      title    		    tags mask  		switchtotag  isfloating  monitor */
 	{ "firefox",  "Navigator",  NULL,  	 	      1,	    	 		1, 				   0,   			 -1 },
+	{ "St",  			"st",       	"nmtui",   	    1 << 1,	   		1, 				   0,   			 -1 },
 	{ "St",  			"st",       	"htop",   	    1 << 1,	   		1, 				   0,   			 -1 },
 	{ "St",  			"st",       	"nvim",   	    1 << 2,	   		1, 				   0,   			 -1 },
 	{ "St",  			"st",       	"tty-clock",   	1 << 2,	   		1, 				   0,   			 -1 },
@@ -118,6 +119,7 @@ static const char *torrent[] = { "st", "-e", "tremc", NULL };
 static const char *music[] = { "st", "-e", "ncmpcpp", NULL };
 static const char *lynx[] = { "st", "-e", "lynx", NULL };
 static const char *anime[] = { "st", "-e", "ani-cli", NULL };
+static const char *wifi[] = { "st", "-e", "nmtui", NULL };
 static const char *watch[] = { "/root/bin/watch", NULL };
 static const char *record[] = { "/root/bin/record", NULL };
 static const char *vpn[] = { "/root/bin/vpn", NULL };
@@ -193,7 +195,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,       XK_grave,      spawn,          {.v = screenshotSelect} },
 	{ ControlMask,            XK_grave,      spawn,          {.v = mypointer } },
 	{ MODKEY,                 XK_p,      spawn,          {.v = photos } },
-	{ MODKEY,             		XK_w,      spawn,          {.v = watch } },
+	{ MODKEY,             		XK_w,      spawn,          {.v = wifi } },
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
 	{ MODKEY|ShiftMask,	      XK_b,      spawn,          {.v = batterylevel } },
