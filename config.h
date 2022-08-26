@@ -83,7 +83,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-// volume controls
+// controls
 static const char *upbrightness[] = { "brightnessctl", "s", "10%+", NULL };
 static const char *downbrightness[] = { "brightnessctl", "s", "10%-", NULL };
 static const char *upkbbacklight[] = { "/root/bin/kbbacklight", "UP", NULL };
@@ -151,6 +151,7 @@ static const char *translate[] = { "firefox", "https://translate.google.com/", N
 static const char *magnetDL[] = { "firefox", "https://www.magnetdl.com/", NULL };
 static const char *contacts[] = { "firefox", "https://contacts.google.com/", NULL };
 static const char *github[] = { "firefox", "https://www.github.com/nemo256/", NULL };
+static const char *localhost[] = { "firefox", "localhost:3000", NULL };
 
 #include "shiftview.c"
 static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
@@ -214,6 +215,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	      XK_t,      spawn,          {.v = translate } },
 	{ MODKEY|ShiftMask,	      XK_d,      spawn,          {.v = magnetDL } },
 	{ MODKEY|ShiftMask,	      XK_c,      spawn,          {.v = contacts } },
+	{ MODKEY|ShiftMask,	      XK_l,      spawn,          {.v = localhost } },
 	//{ MODKEY|ShiftMask,	      XK_g,      spawn,          {.v = github } },
 
 	//{ MODKEY,         		    XK_f,        togglebar,      {0} },
