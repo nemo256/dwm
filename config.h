@@ -200,7 +200,7 @@ static Key keys[] = {
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
 	{ MODKEY|ShiftMask,	      XK_b,      spawn,          {.v = batterylevel } },
-	{ MODKEY,	                XK_g,      spawn,          {.v = google } },
+	//{ MODKEY,	                XK_g,      spawn,          {.v = google } },
 	{ MODKEY|ShiftMask,	      XK_f,      spawn,          {.v = facebook } },
 	{ MODKEY|ShiftMask,	      XK_m,      spawn,          {.v = messenger } },
 	{ MODKEY|ShiftMask,	      XK_n,      spawn,          {.v = netflix } },
@@ -216,7 +216,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	      XK_d,      spawn,          {.v = magnetDL } },
 	{ MODKEY|ShiftMask,	      XK_c,      spawn,          {.v = contacts } },
 	{ MODKEY|ShiftMask,	      XK_l,      spawn,          {.v = localhost } },
-	//{ MODKEY|ShiftMask,	      XK_g,      spawn,          {.v = github } },
+	{ MODKEY|ShiftMask,	      XK_g,      spawn,          {.v = github } },
 
 	//{ MODKEY,         		    XK_f,        togglebar,      {0} },
 	{ MODKEY,                 XK_Tab,      focusstack,     {.i = +1 } },
