@@ -129,6 +129,7 @@ static const char *mypointer[] = { "/root/bin/pointer", NULL };
 static const char *screenshot[] = { "/root/bin/screenshot", NULL };
 static const char *screenshotSelect[] = { "/root/bin/screenshotSelect", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/root/Pictures", NULL };
+static const char *signal_desktop[] = { "signal-desktop", "--no-sandbox", NULL };
 /* static const char *tuir[] = { "st", "-e", "tuir", NULL }; */
 
 // firefox command
@@ -188,6 +189,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,       XK_v,      spawn,          {.v = vpn } },
 	{ MODKEY,                 XK_k,      spawn,          {.v = mykeys } },
 	{ MODKEY,                 XK_s,      spawn,          {.v = download } },
+	{ MODKEY|ShiftMask,       XK_s,      spawn,          {.v = signal_desktop } },
 	{ MODKEY,                 XK_t,      spawn,          {.v = torrent } },
 	{ MODKEY,                 XK_m,      spawn,          {.v = music } },
 	{ MODKEY,                 XK_l,      spawn,          {.v = lynx } },
