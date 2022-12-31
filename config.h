@@ -6,7 +6,7 @@
 static const unsigned int borderpx  	= 5;        /* border pixel size of windows */
 static const unsigned int gappx     	= 5;        /* gaps size between windows */
 static const unsigned int snap      	= 32;       /* snap pixel */
-static const int showbar            	= 1;        /* 0 means no bar */
+static const int showbar            	= 0;        /* 0 means no bar */
 static const int topbar             	= 1;        /* 0 means bottom bar */
 static const char *fonts[]          	= { "Fira Code:size=20:style=Bold",  "SymbolsNerdFont:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
 static const char dmenufont[]       	= "Fira Code:size=20:style=Bold";
@@ -204,7 +204,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	      XK_b,      spawn,          {.v = batterylevel } },
 	//{ MODKEY,	                XK_g,      spawn,          {.v = google } },
 	{ MODKEY,	                XK_g,      spawn,          {.v = github } },
-	{ MODKEY|ShiftMask,	      XK_f,      spawn,          {.v = facebook } },
+	//{ MODKEY|ShiftMask,	      XK_f,      spawn,          {.v = facebook } },
 	{ MODKEY|ShiftMask,	      XK_m,      spawn,          {.v = messenger } },
 	{ MODKEY|ShiftMask,	      XK_n,      spawn,          {.v = netflix } },
 	{ MODKEY|ShiftMask,	      XK_y,      spawn,          {.v = youtube } },
@@ -221,7 +221,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	      XK_l,      spawn,          {.v = localhost } },
 	//{ MODKEY|ShiftMask,	      XK_g,      spawn,          {.v = github } },
 
-	//{ MODKEY,         		    XK_f,        togglebar,      {0} },
+	{ MODKEY|ShiftMask,       XK_f,        togglebar,      {0} },
 	{ MODKEY,                 XK_Tab,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,       XK_Tab,      focusstack,     {.i = -1 } },
 	//{ MODKEY,                 XK_i,      incnmaster,     {.i = +1 } },
