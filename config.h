@@ -63,7 +63,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.5;  /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.63;  /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -135,7 +135,7 @@ static const char *pipeviewer[] = { "st", "-f", "'Fira Code:size=16:style=bold:a
 static const char *torrent[] = { "st", "-e", "tremc", NULL };
 static const char *music[] = { "st", "-e", "ncmpcpp", NULL };
 static const char *lynx[] = { "st", "-e", "lynx", NULL };
-static const char *anime[] = { "st", "-e", "ani-cli", NULL };
+static const char *anime[] = { "st", "-e", "ani-cli", "--dub", NULL };
 static const char *wifi[] = { "st", "-e", "nmtui", NULL };
 static const char *watch[] = { "/root/bin/watch", NULL };
 static const char *record[] = { "/root/bin/record", NULL };
