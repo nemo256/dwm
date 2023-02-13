@@ -3,12 +3,12 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  	= 5;        /* border pixel size of windows */
+static const unsigned int borderpx  	= 7;        /* border pixel size of windows */
 static const unsigned int gappx     	= 5;        /* gaps size between windows */
 static const unsigned int snap      	= 32;       /* snap pixel */
 static const int showbar            	= 0;        /* 0 means no bar */
 static const int topbar             	= 1;        /* 0 means bottom bar */
-static const char *fonts[]          	= { "Fira Code:size=20:style=Bold",  "SymbolsNerdFont:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
+static const char *fonts[]          	= { "Fira Code:size=20:style=Bold",  "Symbols Nerd Font:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
 static const char dmenufont[]       	= "Fira Code:size=20:style=Bold";
 //background color
 static const char col_black[]       	= "#000000";
@@ -60,15 +60,15 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.63; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[M]",      monocle },   /* first entry is default */
-	//{ "[]=",      tile },    /* first entry is default */
-	//{ "><>",      NULL },    /* no layout function means floating behavior */
+	// { "[M]",      monocle },   /* first entry is default */
+	{ "[]=",      tile },    /* first entry is default */
+	// { "><>",      NULL },    /* no layout function means floating behavior */
 };
 
 /* key definitions */
@@ -202,9 +202,9 @@ static Key keys[] = {
   /* website commands */
 	{ MODKEY,	                XK_b,      spawn,          {.v = firefox } },
 	{ MODKEY|ShiftMask,	      XK_b,      spawn,          {.v = batterylevel } },
-	//{ MODKEY,	                XK_g,      spawn,          {.v = google } },
+	// { MODKEY,	                XK_g,      spawn,          {.v = google } },
 	{ MODKEY,	                XK_g,      spawn,          {.v = github } },
-	//{ MODKEY|ShiftMask,	      XK_f,      spawn,          {.v = facebook } },
+	// { MODKEY|ShiftMask,	      XK_f,      spawn,          {.v = facebook } },
 	{ MODKEY|ShiftMask,	      XK_m,      spawn,          {.v = messenger } },
 	{ MODKEY|ShiftMask,	      XK_n,      spawn,          {.v = netflix } },
 	{ MODKEY|ShiftMask,	      XK_y,      spawn,          {.v = youtube } },
@@ -219,22 +219,21 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	      XK_d,      spawn,          {.v = magnetDL } },
 	{ MODKEY|ShiftMask,	      XK_c,      spawn,          {.v = contacts } },
 	{ MODKEY|ShiftMask,	      XK_l,      spawn,          {.v = localhost } },
-	//{ MODKEY|ShiftMask,	      XK_g,      spawn,          {.v = github } },
 
 	{ MODKEY|ShiftMask,       XK_f,        togglebar,      {0} },
 	{ MODKEY,                 XK_Tab,      focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,       XK_Tab,      focusstack,     {.i = -1 } },
-	//{ MODKEY,                 XK_i,      incnmaster,     {.i = +1 } },
-	//{ MODKEY,                 XK_u,      incnmaster,     {.i = -1 } },
-	//{ MODKEY,                 XK_h,      setmfact,       {.f = -0.05} },
-	//{ MODKEY,                 XK_l,      setmfact,       {.f = +0.05} },
-	//{ MODKEY,                 XK_Tab,	   zoom,           {0} },
+	// { MODKEY,                 XK_i,      incnmaster,     {.i = +1 } },
+	// { MODKEY,                 XK_u,      incnmaster,     {.i = -1 } },
+	// { MODKEY,                 XK_h,      setmfact,       {.f = -0.05} },
+	// { MODKEY,                 XK_l,      setmfact,       {.f = +0.05} },
+	// { MODKEY,                 XK_Tab,	   zoom,           {0} },
 	{ MODKEY,                 XK_z,      view,           {0} },
 	{ MODKEY,	                XK_q,      killclient,     {0} },
-	//{ MODKEY|ShiftMask,       XK_t,      setlayout,      {.v = &layouts[0]} },
-	//{ MODKEY|ShiftMask,       XK_f,      setlayout,      {.v = &layouts[1]} },
-	//{ MODKEY|ShiftMask,       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ShiftMask,       XK_space,  setlayout,      {0} },
+	// { MODKEY|ShiftMask,       XK_t,      setlayout,      {.v = &layouts[0]} },
+	// { MODKEY|ShiftMask,       XK_f,      setlayout,      {.v = &layouts[1]} },
+	// { MODKEY|ShiftMask,       XK_m,      setlayout,      {.v = &layouts[2]} },
+	// { MODKEY|ShiftMask,       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,       XK_space,  togglefloating, {0} },
 	{ MODKEY,                 XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,       XK_0,      tag,            {.ui = ~0 } },
@@ -249,11 +248,11 @@ static Key keys[] = {
 	TAGKEYS(                  XK_2,                      1)
 	TAGKEYS(                  XK_3,                      2)
 	TAGKEYS(                  XK_4,                      3)
-	//TAGKEYS(                  XK_5,                      4)
-	//TAGKEYS(                  XK_6,                      5)
-	//TAGKEYS(                  XK_7,                      6)
-	//TAGKEYS(                  XK_8,                      7)
-	//TAGKEYS(                  XK_9,                      8)
+	// TAGKEYS(                  XK_5,                      4)
+	// TAGKEYS(                  XK_6,                      5)
+	// TAGKEYS(                  XK_7,                      6)
+	// TAGKEYS(                  XK_8,                      7)
+	// TAGKEYS(                  XK_9,                      8)
 	{ MODKEY|ShiftMask,       XK_q,      quit,           {0} },
 };
 
