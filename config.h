@@ -10,16 +10,15 @@ static const int showbar            	= 0;        /* 0 means no bar */
 static const int topbar             	= 1;        /* 0 means bottom bar */
 static const char *fonts[]          	= { "Fira Code:size=20:style=Bold",  "Symbols Nerd Font:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
 static const char dmenufont[]       	= "Fira Code:size=20:style=Bold";
-//background color
+// background color
 static const char col_black[]       	= "#000000";
-//inactive window border color
+// inactive window border color
 static const char col_gray2[]       	= "#444444";
-//font color
+// font color
 static const char col_gray3[]       	= "#bbbbbb";
-//current tag and current window font color
+// current tag and current window font color
 static const char col_gray4[]       	= "#000000";
-//Top bar second color (orange) and active window border color
-//#f59542
+// Top bar second color (orange) and active window border color
 static const char col_indigo[]      	= "#4b0088";
 static const unsigned int baralpha  	= 0xcc;
 static const unsigned int borderalpha = OPAQUE;
@@ -36,7 +35,7 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-//tag names (upper left)
+// tag names (upper left)
 static const char *tags[] = { "", "", "{}", "" };
 
 static const Rule rules[] = {
