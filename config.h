@@ -246,6 +246,7 @@ static Key keys[] = {
 	// { MODKEY|ShiftMask,       XK_l,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                 XK_h,      setmfact,       {.f = -0.01} },
 	{ MODKEY,                 XK_l,      setmfact,       {.f = +0.01} },
+  { MODKEY,                 XK_equal,  resetlayout,    {0} },
 	// { MODKEY,                 XK_Tab,	   zoom,           {0} },
 	{ MODKEY,                 XK_u,      incrgaps,       {.i = +1 } },
 	{ MODKEY|ShiftMask,       XK_u,      incrgaps,       {.i = -1 } },
