@@ -172,6 +172,7 @@ static const char *github[] = { "firefox", "https://www.github.com/nemo256/", NU
 static const char *localhost[] = { "firefox", "localhost:3000", NULL };
 
 #include "shiftview.c"
+#include "movestack.c"
 static char *endx[] = { "/bin/sh", "-c", "endx", "externalpipe", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -246,6 +247,8 @@ static Key keys[] = {
 	// { MODKEY|ShiftMask,       XK_l,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                 XK_h,      setmfact,       {.f = -0.01} },
 	{ MODKEY,                 XK_l,      setmfact,       {.f = +0.01} },
+	{ MODKEY|ShiftMask,       XK_j,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,       XK_k,      movestack,      {.i = -1 } },
   { MODKEY,                 XK_equal,  resetlayout,    {0} },
 	// { MODKEY,                 XK_Tab,	   zoom,           {0} },
 	{ MODKEY,                 XK_u,      incrgaps,       {.i = +1 } },
