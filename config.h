@@ -3,15 +3,15 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx    = 7;     /* border pixel size of windows */
+static const unsigned int borderpx    = 7;    /* border pixel size of windows */
 static const unsigned int gappih      = 7;    /* horiz inner gap between windows */
 static const unsigned int gappiv      = 7;    /* vert inner gap between windows */
 static const unsigned int gappoh      = 0;    /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov      = 0;    /* vert outer gap between windows and screen edge */
-static       int smartgaps            = 1;     /* 1 means no outer gap when there is */
-static const unsigned int snap        = 32;    /* snap pixel */
-static const int showbar              = 0;     /* 0 means no bar */
-static const int topbar               = 1;     /* 0 means bottom bar */
+static       int smartgaps            = 1;    /* 1 means no outer gap when there is */
+static const unsigned int snap        = 32;   /* snap pixel */
+static const int showbar              = 0;    /* 0 means no bar */
+static const int topbar               = 1;    /* 0 means bottom bar */
 static const char *fonts[]          	= { "Fira Code:size=20:style=Bold",  "Symbols Nerd Font:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
 static const char dmenufont[]       	= "Fira Code:size=20:style=Bold";
 // background color
@@ -63,7 +63,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5;  /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -73,8 +73,8 @@ static const Layout layouts[] = {
   /* symbol     arrange function */
   // { "[]=",      tile },    /* first entry is default */
   // { "[M]",      monocle },
-  // { "[@]",      spiral },
-  { "[\\]",     dwindle },
+  { "[@]",      spiral },
+  // { "[\\]",     dwindle },
   // { "H[]",      deck },
   // { "TTT",      bstack },
   // { "===",      bstackhoriz },
