@@ -59,7 +59,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.63; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -129,7 +129,7 @@ static const char *screenshot[] = { "/root/bin/screenshot", NULL };
 static const char *screenshotSelect[] = { "/root/bin/screenshotSelect", NULL };
 static const char *photos[] = { "sxiv", "-ftqrb", "/root/Pictures", NULL };
 static const char *signal_desktop[] = { "signal-desktop", "--no-sandbox", NULL };
-/* static const char *tuir[] = { "st", "-e", "tuir", NULL }; */
+// static const char *tuir[] = { "st", "-e", "tuir", NULL };
 
 // firefox command
 static const char *firefox[] = { "firefox", NULL };
@@ -177,7 +177,7 @@ static Key keys[] = {
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                 XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                 XK_f,      spawn,          {.v = ranger } },
-	{ MODKEY,                 XK_h,      spawn,          {.v = htop } },
+	// { MODKEY,                 XK_h,      spawn,          {.v = htop } },
 	{ MODKEY,                 XK_v,      spawn,          {.v = vim } },
 	{ MODKEY,                 XK_e,      spawn,          {.v = email } },
 	{ MODKEY,                 XK_c,      spawn,          {.v = clock } },
@@ -191,7 +191,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,       XK_s,      spawn,          {.v = signal_desktop } },
 	{ MODKEY,                 XK_t,      spawn,          {.v = torrent } },
 	{ MODKEY,                 XK_m,      spawn,          {.v = music } },
-	{ MODKEY,                 XK_l,      spawn,          {.v = lynx } },
+	// { MODKEY,                 XK_l,      spawn,          {.v = lynx } },
 	{ MODKEY,                 XK_a,      spawn,          {.v = anime } },
 	{ MODKEY,                 XK_grave,      spawn,          {.v = screenshot } },
 	{ MODKEY|ShiftMask,       XK_grave,      spawn,          {.v = screenshotSelect} },
@@ -218,14 +218,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	      XK_d,      spawn,          {.v = magnetDL } },
 	{ MODKEY|ShiftMask,	      XK_c,      spawn,          {.v = contacts } },
 	{ MODKEY|ShiftMask,	      XK_l,      spawn,          {.v = localhost } },
-
-	{ MODKEY|ShiftMask,       XK_f,        togglebar,      {0} },
-	{ MODKEY,                 XK_Tab,      focusstack,     {.i = +1 } },
-	{ MODKEY|ShiftMask,       XK_Tab,      focusstack,     {.i = -1 } },
-	// { MODKEY,                 XK_i,      incnmaster,     {.i = +1 } },
-	// { MODKEY,                 XK_u,      incnmaster,     {.i = -1 } },
-	// { MODKEY,                 XK_h,      setmfact,       {.f = -0.05} },
-	// { MODKEY,                 XK_l,      setmfact,       {.f = +0.05} },
+  /* dwm commands */
+	{ MODKEY|ShiftMask,       XK_f,      togglebar,      {0} },
+	{ MODKEY,                 XK_Tab,    focusstack,     {.i = +1 } },
+	{ MODKEY|ShiftMask,       XK_Tab,    focusstack,     {.i = -1 } },
+	// { MODKEY|ShiftMask,       XK_h,      incnmaster,     {.i = +1 } },
+	// { MODKEY|ShiftMask,       XK_l,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                 XK_h,      setmfact,       {.f = -0.01} },
+	{ MODKEY,                 XK_l,      setmfact,       {.f = +0.01} },
 	// { MODKEY,                 XK_Tab,	   zoom,           {0} },
 	{ MODKEY,                 XK_z,      view,           {0} },
 	{ MODKEY,	                XK_q,      killclient,     {0} },
