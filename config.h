@@ -12,8 +12,8 @@ static       int smartgaps            = 1;    /* 1 means no outer gap when there
 static const unsigned int snap        = 32;   /* snap pixel */
 static const int showbar              = 0;    /* 0 means no bar */
 static const int topbar               = 1;    /* 0 means bottom bar */
-static const char *fonts[]          	= { "Fira Code:size=20:style=Bold",  "Symbols Nerd Font:size=22:style=Bold", "Arab:size=20:antialias=true:autohint=true:style=Bold" };
-static const char dmenufont[]       	= "Fira Code:size=20:style=Bold";
+static const char *fonts[]          	= { "FiraCode Nerd Font:size=20:style=Bold" };
+static const char dmenufont[]       	= "FiraCode Nerd Font:size=20:style=Bold";
 // background color
 static const char col_black[]       	= "#000000";
 // inactive window border color
@@ -73,7 +73,7 @@ static const Layout layouts[] = {
   /* symbol     arrange function */
   // { "[]=",      tile },    /* first entry is default */
   { "[M]",      monocle },
-  { "[@]",      spiral },
+  // { "[@]",      spiral },
   // { "[\\]",     dwindle },
   // { "H[]",      deck },
   // { "TTT",      bstack },
